@@ -1,0 +1,113 @@
+.about__container {
+  width: 100%;
+  padding: 5rem;
+  overflow: hidden;
+}
+
+.about__card-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 5rem;
+  gap: 2rem;
+}
+
+.about__card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 300px;
+  height: 350px;
+  padding: 1rem;
+}
+
+.about__card img {
+  width: 200px;
+  height: 200px;
+  object-fit: fill;
+  filter: drop-shadow(2px 2px 15px var(--dark-brown));
+}
+
+.about__card h1 {
+  text-transform: uppercase;
+  font-size: 2rem;
+  font-weight: 400;
+  color: var(--dark-brown);
+}
+
+.about__card a {
+  text-decoration: none;
+  font-size: 2rem;
+  padding-block: 0.2rem;
+  padding-inline: 1.5rem;
+  color: var(--white);
+  background-color: var(--dark-brown);
+  box-shadow: 2px 2px 15px var(--brown);
+}
+
+.command__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.command__title {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.carousel-container {
+  display: flex;
+  gap: 5rem;
+  padding-block: 1rem;
+  user-select: none;
+  overflow: hidden;
+}
+
+.carousel-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  list-style: none;
+  flex-shrink: 0;
+  gap: 5rem;
+  animation: scrolling 30s linear infinite;
+
+  li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding-block: 1rem;
+    background-color: var(--light-orange-gray);
+    box-shadow: 2px 2px 15px var(--dark-brown);
+
+    h1 {
+      font-size: 2rem;
+      color: var(--txt-dark-brown);
+    }
+
+    h2 {
+      font-size: 1.3rem;
+      color: var(--txt-brown);
+    }
+
+    img {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+  }
+}
+
+@keyframes scrolling {
+  to {
+    transform: translateX(calc(-100% - 5rem));
+  }
+}
