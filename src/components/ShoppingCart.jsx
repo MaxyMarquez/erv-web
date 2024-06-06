@@ -85,6 +85,7 @@ const ShoppingCart = () => {
         onClick={() => setToggle((prev) => !prev)}
       >
         <FaCartShopping />
+
         <span>{cart?.length ? cantItems : 0}</span>
       </button>
 
@@ -98,18 +99,28 @@ const ShoppingCart = () => {
         >
           <header className="shopping-cart__header">
             <h1>Mi Carrito</h1>
+
             <button className="" onClick={() => setToggle((prev) => !prev)}>
               <IoCloseOutline />
             </button>
           </header>
 
           <div className="shopping-cart__body">
+            <div
+              className={`${
+                loading ? "show__loader" : ""
+              } shopping-cart__loader`}
+            >
+              <Loader width={50} height={50} color={"#2b1c12"} />
+            </div>
+
             {cart?.length ? (
               cart?.map((c) => (
                 <div key={c.id} className="shopping-cart__card">
                   <div className="shopping-cart__card__img">
                     <img src={c.imagen} alt="" />
                   </div>
+
                   <div className="shopping-cart__card__body">
                     <div className="shopping-cart__card__body__inner">
                       <div className="shopping-cart__card__title">
@@ -138,7 +149,9 @@ const ShoppingCart = () => {
                               <GoDash />
                             )}
                           </button>
+
                           <span>{c.cantidad}</span>
+
                           <button
                             onClick={() =>
                               changeQuantity(

@@ -2,10 +2,13 @@ import React from "react";
 
 import "@/styles/Loader.css";
 
-const Loader = () => {
+const Loader = ({ width, height, color }) => {
   return (
     <>
-      <span class="loader"></span>
+      <span
+        style={{ width: width, height: height, borderColor: color }}
+        class="loader"
+      ></span>
     </>
   );
 };
