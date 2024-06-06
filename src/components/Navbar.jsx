@@ -13,6 +13,7 @@ import {
 
 import "@/styles/Navbar.css";
 import { Link } from "react-router-dom";
+import ShoppingCart from "./ShoppingCart";
 
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
@@ -27,7 +28,7 @@ const Navbar = () => {
         <li className="nav__link">
           <HashLink
             smooth
-            to="#inicio"
+            to="/#inicio"
             onClick={() => setToggle((prev) => !prev)}
           >
             Inicio
@@ -45,7 +46,7 @@ const Navbar = () => {
         <li className="nav__link">
           <HashLink
             smooth
-            to="#eventos"
+            to="/#eventos"
             onClick={() => setToggle((prev) => !prev)}
           >
             Eventos
@@ -54,7 +55,7 @@ const Navbar = () => {
         <li className="nav__link">
           <HashLink
             smooth
-            to="#galeria"
+            to="/#galeria"
             onClick={() => setToggle((prev) => !prev)}
           >
             Galería
@@ -63,7 +64,7 @@ const Navbar = () => {
         <li className="nav__link">
           <HashLink
             smooth
-            to="#blog"
+            to="/#blog"
             onClick={() => setToggle((prev) => !prev)}
           >
             Blog
@@ -72,7 +73,7 @@ const Navbar = () => {
         <li className="nav__link">
           <HashLink
             smooth
-            to="#contacto"
+            to="/#contacto"
             onClick={() => setToggle((prev) => !prev)}
           >
             Contactanos
@@ -100,8 +101,9 @@ const Navbar = () => {
         </ul>
 
         <div className="nav__user">
-          <FaCartShopping />
+          <ShoppingCart />
         </div>
+
         <div className="nav__user">
           <FaUser />
         </div>

@@ -10,7 +10,6 @@ import Contact from "@/sections/Contact";
 const Home = () => {
   return (
     <>
-      <Navbar />
       <Header />
       <About />
       <Events />

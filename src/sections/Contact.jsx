@@ -63,7 +63,11 @@ const Contact = () => {
                 <FaMapLocationDot className="contact__info__icon" />
                 Dirección
               </span>
-              <a className="contact__info__link" href="">
+              <a
+                className="contact__info__link"
+                href="https://maps.app.goo.gl/J1sJE7vVNYAbwWhY9"
+                target="_blank"
+              >
                 Av. Principal de Propatria, Centro Comercial Propatria, Piso 5
                 Oficina B3. Caracas, Venezuela
               </a>
@@ -74,7 +78,10 @@ const Contact = () => {
                 <TbMailOpenedFilled className="contact__info__icon" />
                 Correo Electroníco
               </span>
-              <a className="contact__info__link" href="">
+              <a
+                className="contact__info__link"
+                href="mailto:oficinanacionalerv@hotmail.com"
+              >
                 oficinanacionalerv@hotmail.com
               </a>
             </div>

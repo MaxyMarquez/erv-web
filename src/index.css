@@ -5,7 +5,7 @@
   --main-bg-color: #2b1c12;
 
   /* Main Colors */
-  --white: #dddddd;
+  --white: #f3f3f3;
   --black: #222;
   --brown: #964b00;
   --light-brown: #c4a484;
@@ -30,4 +30,8 @@
   font-weight: 300;
   font-style: normal;
   font-variation-settings: "wdth" 100;
+}
+
+body {
+  overflow-y: scroll;
 }

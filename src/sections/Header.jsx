@@ -1,4 +1,3 @@
-import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "@/styles/Header.css";
 import "swiper/css";
@@ -14,18 +13,21 @@ import {
   Autoplay,
   EffectCreative,
 } from "swiper/modules";
-import { HashLink } from "react-router-hash-link";
+import { useDispatch, useSelector } from "react-redux";
+import { useEffect } from "react";
+import { getBanner } from "@/redux/actions";
 
 const Header = () => {
+  const dispatch = useDispatch();
+  const banner = useSelector((state) => state.banner);
+
+  useEffect(() => {
+    dispatch(getBanner());
+  }, [dispatch]);
+
   return (
     <>
       <section id="inicio" className="header__container">
-        <article className="">
-          <h1>Bienvenidos a Exploradores del Rey</h1>
-          <HashLink smooth to="#contacto">
-            Contacto
-          </HashLink>
-        </article>
         <Swiper
           autoplay={{
             delay: 3000,
@@ -62,18 +64,11 @@ const Header = () => {
           ]}
           className="carousel__container"
         >
-          <SwiperSlide>
-            <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
-          </SwiperSlide>
+          {banner?.map((b) => (
+            <SwiperSlide key={b.id}>
+              <img src={b.imagen} />
+            </SwiperSlide>
+          ))}
         </Swiper>
       </section>
     </>
