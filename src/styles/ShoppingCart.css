@@ -41,7 +41,7 @@
   right: 0;
   display: grid;
   align-content: space-between;
-  width: 400px;
+  width: 100%;
   height: 100dvh;
   background-color: var(--white);
   z-index: 100;
@@ -225,4 +225,10 @@
 
 .cart__empty {
   text-align: center;
+}
+
+@media (width > 768px) {
+  .shopping-cart__inner {
+    width: 400px;
+  }
 }
