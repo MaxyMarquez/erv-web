@@ -80,7 +80,11 @@ const Navbar = () => {
           </HashLink>
         </li>
         <li className="nav__link">
-          <HashLink smooth to="/intendencia">
+          <HashLink
+            smooth
+            to="/intendencia"
+            onClick={() => setToggle((prev) => !prev)}
+          >
             Intendencia
           </HashLink>
         </li>
