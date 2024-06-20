@@ -5,6 +5,7 @@ import {
   GET_PRODUCTS,
   GET_CATEGORIES,
   GET_CART,
+  GET_ORDERS,
 } from "./action-type";
 
 export const getProducts = () => {
@@ -87,6 +88,22 @@ export const getCategories = () => {
         type: GET_CATEGORIES,
         payload: data.data,
       });
-    } catch (error) {}
+    } catch (error) {
+      console.error(error);
+    }
+  };
+};
+
+export const getOrders = (users_id) => {
+  return async (dispatch) => {
+    try {
+      const { data } = await axios.get("/pedido", { params: { users_id } });
+      dispatch({
+        type: GET_ORDERS,
+        payload: data.data,
+      });
+    } catch (error) {
+      console.error(error);
+    }
   };
 };

@@ -1,7 +1,10 @@
 import { Routes, Route } from "react-router-dom";
-import Home from "@/pages/Home";
 import Navbar from "./components/Navbar";
+import Home from "@/pages/Home";
 import Intendencia from "./pages/Intendencia";
+import UserPanel from "./pages/UserPanel";
+import UserOrders from "./components/UserOrders";
+import UserAccount from "./components/UserAccount";
 
 import axios from "axios";
 
@@ -15,6 +18,10 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/intendencia" element={<Intendencia />} />
+        <Route exact path="/panel-de-usuario" element={<UserPanel />}>
+          <Route exact path="cuenta" element={<UserAccount />} />
+          <Route exact path="pedidos" element={<UserOrders />} />
+        </Route>
       </Routes>
     </>
   );

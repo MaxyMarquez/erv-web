@@ -14,6 +14,7 @@ import {
 import "@/styles/Navbar.css";
 import { Link } from "react-router-dom";
 import ShoppingCart from "./ShoppingCart";
+import UserButton from "./UserButton";
 
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
@@ -109,7 +110,7 @@ const Navbar = () => {
         </div>
 
         <div className="nav__user">
-          <FaUser />
+          <UserButton />
         </div>
 
         <div className="nav__button" onClick={() => setToggle((prev) => !prev)}>

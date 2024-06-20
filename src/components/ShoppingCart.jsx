@@ -18,7 +18,7 @@ const ShoppingCart = () => {
   const dispatch = useDispatch();
 
   const cart = useSelector((state) => state.carrito);
-  console.log(cart);
+
   const cantItems = cart?.reduce((acc, val) => acc + val.cantidad, 0);
 
   const subtotal = cart
@@ -190,8 +190,9 @@ const ShoppingCart = () => {
 
           <div className="shoping-cart__total">
             <div className="shoping-cart__total-total">
-              Total <span>${isNaN(total) ? "0.00" : total}</span>
+              Total <span>${cart?.length ? cart[0]?.total : "0.00"}</span>
             </div>
+
             <button
               onClick={() =>
                 generateOrder(cart[0]?.users_id, cart[0]?.carrito_id)

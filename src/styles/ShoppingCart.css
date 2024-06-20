@@ -10,6 +10,7 @@
   background-color: transparent;
   color: var(--white);
   font-size: 1.4rem;
+  cursor: pointer;
 }
 
 .shopping-cart__button span {
@@ -57,7 +58,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 72px;
+  min-height: 72px;
   padding-inline: 1rem;
   color: var(--txt-dark-brown);
   border-bottom: 1px solid var(--light-brown);
@@ -194,7 +195,7 @@
 
 .shoping-cart__total {
   display: grid;
-  height: 150px;
+  min-height: 150px;
   width: 100%;
   padding: 1rem 2rem;
   background-color: var(--light-orange-gray);
@@ -238,8 +239,8 @@
 }
 
 .shopping-cart__loader {
-  position: absolute;
-  top: 0;
+  position: fixed;
+  top: 72px;
   left: 0;
   width: 100%;
   height: 100%;

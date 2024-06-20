@@ -4,6 +4,7 @@ import {
   GET_PRODUCTS,
   GET_CATEGORIES,
   GET_CART,
+  GET_ORDERS,
 } from "./action-type";
 
 const initialState = {
@@ -12,6 +13,7 @@ const initialState = {
   productos: [],
   categorias: [],
   carrito: [],
+  pedidos: [],
 };
 
 const rootReducer = (state = initialState, action) => {
@@ -40,6 +42,11 @@ const rootReducer = (state = initialState, action) => {
       return {
         ...state,
         carrito: action.payload,
+      };
+    case GET_ORDERS:
+      return {
+        ...state,
+        pedidos: action.payload,
       };
     default:
       return state;

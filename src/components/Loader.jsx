@@ -7,7 +7,7 @@ const Loader = ({ width, height, color }) => {
     <>
       <span
         style={{ width: width, height: height, borderColor: color }}
-        class="loader"
+        className="loader"
       ></span>
     </>
   );
