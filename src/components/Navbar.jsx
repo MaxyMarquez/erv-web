@@ -92,7 +92,7 @@ const Navbar = () => {
       </ul>
 
       <div className="nav__social">
-        <ul>
+        {/* <ul>
           <li>
             <Link to="">
               <FaFacebookF className="nav__social-icon" />
@@ -103,7 +103,7 @@ const Navbar = () => {
               <FaXTwitter className="nav__social-icon" />
             </Link>
           </li>
-        </ul>
+        </ul> */}
 
         <div className="nav__user">
           <ShoppingCart />

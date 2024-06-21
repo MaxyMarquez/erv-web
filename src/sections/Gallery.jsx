@@ -1,7 +1,11 @@
 import React from "react";
 import { useState } from "react";
 
+import ArrowPrev from "@/assets/svg/ArrowPrev";
+import ArrowNext from "@/assets/svg/ArrowNext";
+
 import "@/styles/Gallery.css";
+import Cross from "@/assets/svg/Cross";
 
 const Gallery = () => {
   const IMAGES = [
@@ -85,15 +89,19 @@ const Gallery = () => {
               className="lightbox-btn"
               onClick={() => setLightBoxDisplay(false)}
             >
-              X
+              <Cross className={"lightbox-btn-cross"} />
             </button>
-            <button onClick={prevImg}>⭠</button>
+            <button className="lightbox-btn-prev" onClick={prevImg}>
+              <ArrowPrev className={"lightbox-btn-icon"} />
+            </button>
             <img
               className="lightbox-img"
               src={imageToShow}
               onClick={(e) => e.stopPropagation()}
             ></img>{" "}
-            <button onClick={nextImg}>⭢</button>
+            <button className="lightbox-btn-next" onClick={nextImg}>
+              <ArrowNext className={"lightbox-btn-icon"} />
+            </button>
           </div>
         ) : (
           ""

@@ -73,12 +73,13 @@ const OrderForm = ({ openForm, close, order }) => {
           />
 
           <Input
-            type={"number"}
+            type={"text"}
             placeholder={"Monto"}
             label={"Monto"}
             name="monto"
             value={dataForm.monto}
             onChange={handleChange}
+            disabled={true}
           />
 
           <input type="file" onChange={handleFileChange} />

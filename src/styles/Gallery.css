@@ -47,7 +47,6 @@
 
 .lightbox-img {
   width: 70%;
-  height: 90%;
   object-fit: cover;
 }
 
@@ -59,8 +58,37 @@
   height: 50px;
   background-color: transparent;
   border: none;
-  color: white;
   font-size: 2rem;
+}
+
+.lightbox-btn-cross {
+  fill: white;
+}
+
+.lightbox-btn-next,
+.lightbox-btn-prev {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.lightbox-btn-next {
+  right: 0;
+}
+
+.lightbox-btn-prev {
+  left: 0;
+}
+
+.lightbox-btn-icon {
+  fill: rgb(255, 255, 255);
 }
 
 @keyframes show {
@@ -69,5 +97,19 @@
   }
   to {
     opacity: 1;
+  }
+}
+
+@media (width > 768px) {
+  .lightbox-img {
+    height: 90%;
+  }
+
+  .lightbox-btn-next {
+    right: 50px;
+  }
+
+  .lightbox-btn-prev {
+    left: 50px;
   }
 }

@@ -11,6 +11,7 @@ import ShopFilters from "@/components/ShopFilters";
 import "@/styles/Intendencia.css";
 
 const Intendencia = () => {
+  const [openFilters, setOpenFilters] = useState(false);
   const [product, setProduct] = useState({
     name: "",
     categories: [],
@@ -56,6 +57,7 @@ const Intendencia = () => {
   );
 
   useEffect(() => {
+    window.scroll(0, 0);
     dispatch(getProducts());
   }, [dispatch]);
 
@@ -68,9 +70,21 @@ const Intendencia = () => {
           </div>
 
           <div className="btn__filter">
-            <button>
+            <button onClick={() => setOpenFilters((prev) => !prev)}>
               <span>Filtros</span> <BsFilterRight />
             </button>
+
+            <div
+              className={`btn__filter-filters ${
+                openFilters ? "show-filters" : ""
+              }`}
+            >
+              <ShopFilters
+                setCategories={setProduct}
+                setMaxPrice={setProduct}
+                setMinPrice={setProduct}
+              />
+            </div>
           </div>
 
           <div className="intendencia__filters__category">

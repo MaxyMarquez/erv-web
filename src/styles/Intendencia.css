@@ -3,6 +3,7 @@
   justify-content: center;
   width: 100%;
   padding-top: 9rem;
+  padding-bottom: 5rem;
 }
 
 .intendencia__filters {
@@ -50,6 +51,7 @@
 
 .btn__filter {
   display: flex;
+  position: relative;
 }
 
 .btn__filter button {
@@ -60,6 +62,19 @@
   font-size: 1.3rem;
   border: none;
   background-color: transparent;
+}
+
+.btn__filter-filters {
+  position: absolute;
+  top: 55px;
+  right: 0;
+  width: 300px;
+  background-color: white;
+  padding: 2rem;
+  display: none;
+}
+.btn__filter-filters.show-filters {
+  display: block;
 }
 
 @media (width > 768px) {

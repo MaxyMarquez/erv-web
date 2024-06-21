@@ -7,6 +7,7 @@ import UserOrders from "./components/UserOrders";
 import UserAccount from "./components/UserAccount";
 
 import axios from "axios";
+import Footer from "./sections/Footer";
 
 // axios.defaults.baseURL = "https://admin.ervzla.com/api";
 axios.defaults.baseURL = "http://localhost:8000/api";
@@ -23,6 +24,7 @@ function App() {
           <Route exact path="pedidos" element={<UserOrders />} />
         </Route>
       </Routes>
+      <Footer />
     </>
   );
 }

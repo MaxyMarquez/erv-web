@@ -1,5 +1,4 @@
 import React from "react";
-import SideBarNav from "@/components/SideBarNav";
 import UserOrders from "@/components/UserOrders";
 
 import "@/styles/UserPanel.css";
@@ -13,9 +12,6 @@ const UserPanel = () => {
     <div
       className={`user-panel__container ${navOpen ? "user-panel__open" : ""}`}
     >
-      <div className="user-pannel__nav">
-        <SideBarNav navOpen={navOpen} setNavOpen={setNavOpen} />
-      </div>
       <div className="user-pannel__content">
         <Outlet />
       </div>

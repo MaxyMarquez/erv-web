@@ -3,6 +3,7 @@
   flex-direction: column;
   width: 100%;
   padding-top: 72px;
+  padding-bottom: 5rem;
 }
 
 .contact__title {

@@ -1,7 +1,15 @@
 import React from "react";
 import "@/styles/Input.css";
 
-const Input = ({ type, placeholder, label, onChange, value, name }) => {
+const Input = ({
+  type,
+  placeholder,
+  label,
+  onChange,
+  value,
+  name,
+  disabled,
+}) => {
   const handleChange = (e) => {
     const { name, value } = e.target;
     onChange({ name, value });
@@ -16,6 +24,7 @@ const Input = ({ type, placeholder, label, onChange, value, name }) => {
         placeholder={placeholder}
         className="input"
         onChange={handleChange}
+        disabled={disabled}
       />
       <label className="label">{label}</label>
     </div>
